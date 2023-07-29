@@ -1,63 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Tell me the time!</title>
-	<meta charset="UTF-8">
-</head>
-<body onload="javascript:tell_time();">
+	<head>
+		<title>Tell me the time!</title>
+		<meta charset="UTF-8">
+		<script src="css/timeteller.js"></script>
+		<script src="css/clock.js"></script>
+		<link rel="stylesheet" href="js/style.css">
+		<link rel="stylesheet" href="js/clock.css">
+	</head>
+	<body>
+		<h2>Good <span id="daypart"></span>, the time is</h2>
 
-<h2>It's</h2>
-<h2 id = "time" style="text-align: center; text-shadow: true">Time<h2>
+		<div class="clock">
+			<div class="clock-container">
+				<div class="clock-inner">
+					<div class="hand-container-hour">
+						<div class="hour"></div>
+					</div>
+					<div class="hand-container-minute">
+						<div class="minute"></div>
+					</div>
+					<div class="hand-container-second">
+						<div class="second"></div>
+						<div class="second-tail"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<script type="text/javascript">
-	
-window.setInterval(tell_time, 1000)
-	function tell_time()
-	{
-		
-	var text = "";
-	nums = ["zero", "one","two", "three", "four", "five", "six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","twenty-one",
-	"twenty-two","twenty-three","twenty-four","twenty-five","twenty-six","twenty-seven","twenty-eight","twenty-nine","thirty","thirty-one","thirty-two","thirty-three","thirty-four","thirty-five","thirty-six",
-	"thirty-seven","thirty-eight","thirty-nine", "forty", "forty-one", "forty-two", "forty-three", "forty-four", "forty-five", "forty-six", "forty-seven", "forty-eight", "forty-nine","fifty", "fifty-one", "fifty-two", "fifty-three", "fifty-four", "fifty-five", "fifty-six", "fifty-seven", "fifty-eight", "fifty-nine" ]
-
-		d = new Date();
-		var h = d.getHours();
-		var m = d.getMinutes();
-		var s = d.getSeconds();
-
-		switch (true)
-		{
-			case m == 0:
-			text = nums[h] + " o'clock";
-			case m < 30:
-			text = nums[m] + " past " + nums[h];
-			break;
-			case m == 15:
-			text = " a quarter past " + nums[h];
-			break;
-			case m == 30:
-			text = " half past " + nums[h];
-			break;
-			case m == 45:
-			text = " a quarter to " + nums[h + 1];
-			break;
-			case m > 30:
-			text = nums[60-m] + " to " + nums[h + 1]; break;
-		}
-
-		if(s != 1)
-		{
-			text += " and " + nums[s] + " seconds";
-		}
-		else
-		{
-			text += " and " + nums[s] + " second";
-		}
-
-		document.getElementById("time").innerHTML = text;
-	}
-</script>
-
-
-</body>
+		<h3 id="text" class="time"><h3>
+	</body>
 </html>

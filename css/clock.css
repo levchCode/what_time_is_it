@@ -1,0 +1,123 @@
+.clock {
+    display:inline-block;
+    line-height:0px;
+    background-color: darkred;
+    ;
+}
+
+.clock-container {
+    display: inline-block;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.clock-inner {
+    display: block;
+    position: absolute;
+    height: 255px;
+    width: 255px;
+    margin: auto;
+    top: 0; bottom:0; left: 0; right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('svgs/face.svg')
+}
+
+.hand-container-hour {
+    display: block;
+    position: absolute;
+    height: 100%;width: 100%;
+    font-size: 0px;
+    line-height: 0px;
+    padding: 0;
+    margin: auto;
+    top: 0;bottom: 0; left: 0; right: 0;
+    transform-origin: center center;
+    animation: hour1gen .2s 1 forwards;
+}
+
+.hand-container-minute {
+    display: block;
+    position: absolute;
+    height: 100%;width: 100%;
+    font-size: 0px;
+    line-height: 0px;
+    padding: 0;
+    margin: auto;
+    top: 0;bottom: 0; left: 0; right: 0;
+    transform-origin: center center;
+    animation: minute1gen .5s 1 forwards;
+}
+
+.hand-container-second {
+    display: block;
+    position: absolute;
+    height: 100%;width: 100%;
+    font-size: 0px;
+    line-height: 0px;
+    padding: 0;
+    margin: auto;
+    top: 0;bottom: 0; left: 0; right: 0;
+    transform-origin: center center;
+    animation: second1gen .4s 1 forwards;
+}
+
+.minute {
+    display: block;
+    position: absolute;
+    height: 41%;width: 2.7%;
+    top: 1%;
+    font-size: 0px;
+    line-height: 0px;
+    padding: 0;
+    outline: 1px solid transparent;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 0.9px 0.9px 0px 0px;
+    background-color: #fff;
+}
+
+.second {
+    display: block;
+    position: absolute;
+    height: 42%;
+    width: 1.6%;
+    font-size: 0px;line-height: 0px;padding: 0;
+    outline: 1px solid transparent;
+    margin: auto; top: 0; left: 0; right: 0;
+    border-radius: 0.2px 0.2px 0px 0px;
+    background-color:#fff;
+}
+
+.second-tail {
+    display: block;
+    position: absolute;
+    height: 12%;
+    width: 1.6%;
+    top: 58%;
+    font-size: 0px;line-height: 0px;padding: 0;
+    outline: 1px solid transparent;
+    margin: auto; left: 0; right: 0;
+    border-radius: 0px 0px 0.2px 0.2px;
+    background-color: #fff;
+}
+
+.hour {
+    display: block;
+    position: absolute;
+    height: 27%;width: 4%;
+    top: 15%;
+    font-size: 0px;
+    line-height: 0px;
+    padding: 0;
+    outline: 1px solid transparent;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 0.3px 0.3px 0px 0px;
+    background-color: #fff
+}
+

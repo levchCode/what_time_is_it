@@ -1,3 +1,4 @@
-# what_time_is_it
-JS time teller
-A small time-telling app. Hopefully, some time I'll add some more functionality... 
+# JS time teller
+
+A small time-telling app with a nice BBC1 style clock
+
